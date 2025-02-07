@@ -1,0 +1,206 @@
+table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 0 2px;
+}
+
+td:first-child {
+  font-size: 0.875em;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+tr {
+  height: 62px;
+}
+
+thead tr {
+  font-size: 0.875em;
+  line-height: 1.785715em;
+  padding: 0 0.285714em;
+}
+
+.today-date {
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+.today-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #007aff;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.arrow {
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.header {
+  background: #f7f7f7;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.timeline {
+  overflow: auto;
+  max-height: calc(100vh - 40px);
+  position: relative;
+}
+
+.month-year {
+  font-size: 1.5em;
+  line-height: 1.666667em;
+  padding: 0 0.166667em;
+  color: #007aff;
+  cursor: pointer;
+}
+
+.date-input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+}
+
+.event-card {
+  position: absolute;
+  border-radius: 4px;
+  height: 40px;
+  margin-top: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.event-card:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: -2px;
+}
+
+.delete-button {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.delete-button:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.event-title {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.event-time {
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal-actions {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-actions button {
+  margin: 0 10px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-actions button:focus {
+  outline: none;
+}
+
+.primary-cta {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+}
+
+.secondary-cta {
+  border: 1px solid #0056b3;
+  color: #0056b3;
+  background-color: transparent;
+}
+
+.add-resource-button {
+  border: 1px solid #0056b3;
+  color: #0056b3;
+  background-color: transparent;
+  margin: 16px 32px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+}
